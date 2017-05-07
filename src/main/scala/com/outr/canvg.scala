@@ -1,19 +1,21 @@
-package canvg
+package com.outr
 
 import org.scalajs.dom.html
+import org.scalajs.dom.raw.CanvasRenderingContext2D
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.{JSGlobal, ScalaJSDefined}
+import scala.scalajs.js.annotation.{JSGlobalScope, JSName, ScalaJSDefined}
 import scala.scalajs.js.|
 
 @js.native
-@JSGlobal("canvg")
-object TopLevel extends js.Object {
-  def canvg(canvas: String | html.Canvas, svg: String, options: CanvgOptions = js.native): Unit = js.native
+@JSGlobalScope
+object canvg extends js.Object {
+  @JSName("canvg")
+  def apply(canvas: String | html.Canvas, svg: String, options: CanvgOptions = js.native): Unit = js.native
 }
 
 @ScalaJSDefined
-trait CanvgOptions extends js.Any {
+trait CanvgOptions extends js.Object {
   var log: js.UndefOr[Boolean] = js.undefined
   var ignoreMouse: js.UndefOr[Boolean] = js.undefined
   var ignoreAnimation: js.UndefOr[Boolean] = js.undefined

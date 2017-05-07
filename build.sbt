@@ -1,17 +1,15 @@
 name := "canvg.scala.js"
 organization := "com.outr"
-version := "1.4.0"
+version := "1.4.0_1-SNAPSHOT"
 
 scalaVersion := "2.12.2"
 crossScalaVersions := List("2.12.2", "2.11.11")
 
 enablePlugins(ScalaJSPlugin)
-enablePlugins(BuildInfoPlugin)
-
-buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
-buildInfoPackage := "opentype"
 
 libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.1"
 
-crossTarget in fastOptJS := baseDirectory.value / "src" / "main" / "resources" / "app"
-crossTarget in fullOptJS := baseDirectory.value / "src" / "main" / "resources" / "app"
+jsDependencies += ProvidedJS / "rgbcolor.js"
+jsDependencies += ProvidedJS / "StackBlur.js"
+jsDependencies += ProvidedJS / "canvg.js"
+skip in packageJSDependencies := false
