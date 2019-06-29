@@ -1,6 +1,6 @@
 name := "canvg.scala.js"
 organization := "com.outr"
-version := "1.4.0_2-SNAPSHOT"
+version := "1.4.0_2"
 
 scalaVersion := "2.13.0"
 crossScalaVersions := List("2.13.0", "2.12.8", "2.11.12")
