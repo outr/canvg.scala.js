@@ -1,10 +1,9 @@
 name := "canvg.scala.js"
 organization := "com.outr"
-version := "1.4.0_2"
+version := "1.4.0_3-SNAPSHOT"
 
-scalaVersion := "2.13.0"
-crossScalaVersions := List("2.13.0", "2.12.8", "2.11.12")
-scalacOptions += "-P:scalajs:sjsDefinedByDefault"
+scalaVersion := "2.13.1"
+crossScalaVersions := List("2.13.1", "2.12.8")
 
 publishTo in ThisBuild := sonatypePublishTo.value
 sonatypeProfileName in ThisBuild := "com.outr"
@@ -23,8 +22,9 @@ developers in ThisBuild := List(
 )
 
 enablePlugins(ScalaJSPlugin)
+enablePlugins(JSDependenciesPlugin)
 
-libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.7"
+libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "1.0.0"
 
 jsDependencies += ProvidedJS / "rgbcolor.js"
 jsDependencies += ProvidedJS / "StackBlur.js"

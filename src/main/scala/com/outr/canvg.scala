@@ -1,10 +1,9 @@
 package com.outr
 
 import org.scalajs.dom.html
-import org.scalajs.dom.raw.CanvasRenderingContext2D
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.{JSGlobalScope, JSName, ScalaJSDefined}
+import scala.scalajs.js.annotation.{JSGlobalScope, JSName}
 import scala.scalajs.js.|
 
 @js.native
